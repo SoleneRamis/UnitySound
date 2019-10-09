@@ -45,3 +45,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sampleDalle: {fileID: 984696635852878092, guid: e537db3b4902c48caa4334389352cf57,
     type: 3}
+  margin: 20

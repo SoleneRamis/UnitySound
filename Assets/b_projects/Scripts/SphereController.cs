@@ -10,7 +10,6 @@ public class SphereController : MonoBehaviour
     void Start()
     {
         _plateform = Plateform.Instance.GetTiles();
-        Debug.Log(_plateform);
     }
 
     void Update()
