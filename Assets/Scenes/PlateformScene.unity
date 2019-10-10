@@ -322,7 +322,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &248767809
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -450,7 +450,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 905437204}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.22211, y: -2.40419, z: -4.796417}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -753,6 +753,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 230442476115532203, guid: 9c62e18179e954f32a7752c86d0967a2,
+        type: 3}
+      propertyPath: m_Name
+      value: Plateform
+      objectReference: {fileID: 0}
     - target: {fileID: -3191952593081100634, guid: 9c62e18179e954f32a7752c86d0967a2,
         type: 3}
       propertyPath: sounds.Array.size
@@ -883,11 +888,17 @@ PrefabInstance:
       propertyPath: sounds.Array.data[18]
       value: 
       objectReference: {fileID: 8300000, guid: ef92deb2b055641539f374a0e2c77491, type: 3}
-    - target: {fileID: 230442476115532203, guid: 9c62e18179e954f32a7752c86d0967a2,
+    - target: {fileID: -3191952593081100634, guid: 9c62e18179e954f32a7752c86d0967a2,
         type: 3}
-      propertyPath: m_Name
-      value: Plateform
+      propertyPath: margin
+      value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: -3191952593081100634, guid: 9c62e18179e954f32a7752c86d0967a2,
+        type: 3}
+      propertyPath: sampleDalle
+      value: 
+      objectReference: {fileID: -927199367670048503, guid: 4e3c3375d59114c6eb6626c52fb278d3,
+        type: 3}
     - target: {fileID: 577047396439280820, guid: 9c62e18179e954f32a7752c86d0967a2,
         type: 3}
       propertyPath: m_LocalPosition.x

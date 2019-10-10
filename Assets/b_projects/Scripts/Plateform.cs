@@ -9,7 +9,7 @@ public class Plateform : Singleton<Plateform>
 
     public float margin = 10f;
 
-    private string[] _letters = { "a", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" };
+    private string[] _letters = { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "x", "y", "z" };
     private GameObject[] _plateform = new GameObject[25];
     // Start is called before the first frame update
     void Start()
@@ -32,7 +32,6 @@ public class Plateform : Singleton<Plateform>
                 dalle.transform.position = new Vector3(x, 0, z);
 
                 source.clip = sounds[i];
-                dalle.GetComponent<MeshRenderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
                 _plateform[index] = dalle;
 
                 index++;
@@ -47,6 +46,8 @@ public class Plateform : Singleton<Plateform>
             if (Input.GetKeyDown(_letters[i]))
             {
                 _plateform[i].transform.Translate(0, 0.3f, 0);
+
+				//_plateform[i].GetComponent<Animator>().Play();
                 _plateform[i].GetComponent<AudioSource>().Play();
             }
             if (Input.GetKeyUp(_letters[i]))

@@ -43,6 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a7c7aee899e64610ba47e8e7295a347, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sampleDalle: {fileID: 984696635852878092, guid: e537db3b4902c48caa4334389352cf57,
+  sampleDalle: {fileID: 2944090223516959991, guid: 34b23a83a89e1464db609985c4745786,
     type: 3}
+  sounds: []
   margin: 20
