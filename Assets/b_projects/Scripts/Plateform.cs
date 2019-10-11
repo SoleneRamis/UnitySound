@@ -11,13 +11,13 @@ public class Plateform : Singleton<Plateform>
     public float margin = 10f;
     public float speed = 0.05f;
 
-    private string[] _letters = { "a", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" };
     private GameObject[] _plateform = new GameObject[25];
-    private float timer = 0.0f;
+    private string[] _letters = { "a", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" };
 
     void Start()
     {
         GameObject dalle;
+        
      
         int index = 0;
         float dalleWidth = 1.8f;
@@ -35,6 +35,8 @@ public class Plateform : Singleton<Plateform>
                 dalle = Instantiate<GameObject>(sampleDalle, transform);
                 dalle.transform.position = new Vector3(x, 0, z);
 
+                dalle.GetComponent<Dalle>().letter = _letters[index];
+
                 AudioSource source = dalle.AddComponent<AudioSource>();
                 source.clip = sounds[line];
 
@@ -46,21 +48,7 @@ public class Plateform : Singleton<Plateform>
 
     private void Update()
     {
-        timer += Time.deltaTime;
 
-        for (int i = 0; i < _plateform.Length; i++)
-        {
-            if (Input.GetKeyDown(_letters[i]))
-            {
-                _plateform[i].transform.Translate(0, 0.3f, 0);
-                _plateform[i].GetComponent<AudioSource>().Play();
-            }
-
-            if (Input.GetKeyUp(_letters[i]))
-            {
-                _plateform[i].transform.Translate(0, -0.3f, 0);
-            }
-        }
     }
 
     private void FixedUpdate()
@@ -76,24 +64,6 @@ public class Plateform : Singleton<Plateform>
         rotation.eulerAngles = angles;
         transform.rotation = rotation;
 
-        // Créer un timer pour appeler cette fonction tous les X temps (avec X la durée de l'animation d'une dalle
-        GameObject dalle = _plateform[(int)RandomValue(25f)];
-
-        if ( timer > 2f)
-        {
-            for (int i = 0; i < RandomValue(5); i++)
-            {
-                dalle.transform.Translate(0, Mathf.Sin(Time.time)*0.1f, 0);
-            }
-
-            timer = 0f;
-            //dalle.transform.Translate(0, 0, 0);
-        }
-    }
-
-    public float RandomValue(float max)
-    {
-        return Mathf.Round(Random.Range(0, max));
     }
 
     public GameObject[] GetTiles()

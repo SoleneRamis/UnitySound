@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 6809542482129604610}
   - component: {fileID: 4171139562115485661}
   - component: {fileID: 6409391652473808099}
-  - component: {fileID: -2205382234148901902}
   - component: {fileID: -4688073787269032302}
+  - component: {fileID: 3581074437014511674}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -97,22 +97,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &-2205382234148901902
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 984696635852878092}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 62
-  m_CollisionDetection: 0
 --- !u!111 &-4688073787269032302
 Animation:
   m_ObjectHideFlags: 0
@@ -128,6 +112,18 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &3581074437014511674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984696635852878092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88ffbb2243aca4b418bb6afb9ecf038b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2257683677214845821
 GameObject:
   m_ObjectHideFlags: 0
@@ -146,7 +142,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &87770459753272284
 Transform:
   m_ObjectHideFlags: 0
@@ -172,7 +168,7 @@ Light:
   serializedVersion: 9
   m_Type: 2
   m_Color: {r: 0.129539, g: 0.13733743, b: 0.38679248, a: 1}
-  m_Intensity: 353677.66
+  m_Intensity: 3536.7764
   m_Range: 25
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -260,7 +256,7 @@ MonoBehaviour:
   useVolumetric: 1
   featuresFoldout: 1
   showAdditionalSettings: 0
-  displayLightIntensity: 1e+9
+  displayLightIntensity: 10000000
   displayAreaLightEmissiveMesh: 0
   areaLightCookie: {fileID: 0}
   areaLightShadowCone: 120
@@ -340,7 +336,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7125863093905123811
 Transform:
   m_ObjectHideFlags: 0
@@ -534,7 +530,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7251817994888956940
 Transform:
   m_ObjectHideFlags: 0
