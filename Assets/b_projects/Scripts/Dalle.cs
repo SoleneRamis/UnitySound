@@ -27,7 +27,7 @@ public class Dalle : MonoBehaviour
 
         if (Input.GetKeyDown(letter))
         {
-            transform.Translate(0, 0.2f, 0);
+            transform.Translate(0, 0.5f, 0);
             GetComponent<AudioSource>().Play();
         }
     }

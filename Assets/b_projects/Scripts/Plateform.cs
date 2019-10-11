@@ -49,6 +49,7 @@ public class Plateform : Singleton<Plateform>
     private void Update()
     {
 
+
     }
 
     private void FixedUpdate()
