@@ -54,7 +54,7 @@ public class Plateform : Singleton<Plateform>
             {
                 _plateform[i].transform.Translate(0, 0.3f, 0);
 
-				//_plateform[i].GetComponent<Animator>().Play();
+				_plateform[i].GetComponent<Animator>().Play("CINEMA_4D_Main");
                 _plateform[i].GetComponent<AudioSource>().Play();
             }
 
@@ -79,7 +79,7 @@ public class Plateform : Singleton<Plateform>
         transform.rotation = rotation;
 
         // Créer un timer pour appeler cette fonction tous les X temps (avec X la durée de l'animation d'une dalle
-        GameObject dalle = _plateform[(int)RandomValue(25f)];
+        GameObject dalle = _plateform[(int)RandomValue(24f)];
 
         if ( timer > 2f)
         {
