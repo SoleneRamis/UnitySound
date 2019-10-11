@@ -49,6 +49,7 @@ public class Plateform : Singleton<Plateform>
     private void Update()
     {
 
+
     }
 
     private void FixedUpdate()
@@ -63,6 +64,7 @@ public class Plateform : Singleton<Plateform>
 
         rotation.eulerAngles = angles;
         transform.rotation = rotation;
+
     }
 
     public GameObject[] GetTiles()

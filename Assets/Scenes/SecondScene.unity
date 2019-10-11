@@ -4921,83 +4921,12 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!1 &690142874
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 230442476115532203, guid: 9c62e18179e954f32a7752c86d0967a2,
-    type: 3}
-  m_PrefabInstance: {fileID: 1615686790}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 690142876}
-  - component: {fileID: 690142875}
-  m_Layer: 0
-  m_Name: Plateform
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &690142875
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: -3191952593081100634, guid: 9c62e18179e954f32a7752c86d0967a2,
-    type: 3}
-  m_PrefabInstance: {fileID: 1615686790}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 690142874}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a7c7aee899e64610ba47e8e7295a347, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sampleDalle: {fileID: 3674408751666186935, guid: 3e800782393164d9db94cdff2f030e25,
-    type: 3}
-  sounds:
-  - {fileID: 8300000, guid: e26f34170fe53466ea7431fa827b4975, type: 3}
-  - {fileID: 8300000, guid: 2ec57d87169be4fc4845b1954387bf5d, type: 3}
-  - {fileID: 8300000, guid: 0f660f0de1cf84b1b8137d879e91935e, type: 3}
-  - {fileID: 8300000, guid: 18d4ee385e72d40c79ebf533cb79f9ac, type: 3}
-  - {fileID: 8300000, guid: 12c4c6301c2e248d6a7329fe536e5f16, type: 3}
-  - {fileID: 8300000, guid: 72268579505ba4390958e1ac76b6eb0b, type: 3}
-  - {fileID: 8300000, guid: 2fb6f97b0d68849c4b75abaef4026270, type: 3}
-  - {fileID: 8300000, guid: 3ce111b25dd8a497db988d260d8e610b, type: 3}
-  - {fileID: 8300000, guid: d659acaea1d814dbca3327be38b55092, type: 3}
-  - {fileID: 8300000, guid: fd8c5bc40c16e490a8d3be70c5cde280, type: 3}
-  - {fileID: 8300000, guid: 21a85212fb868472da2536963aa51856, type: 3}
-  - {fileID: 8300000, guid: 94a7817a1f3d24c6c9d20ff42a061a1b, type: 3}
-  - {fileID: 8300000, guid: 47e34dd132f0843cda472bf6924c4cae, type: 3}
-  - {fileID: 8300000, guid: 94a7817a1f3d24c6c9d20ff42a061a1b, type: 3}
-  - {fileID: 8300000, guid: 47e34dd132f0843cda472bf6924c4cae, type: 3}
-  - {fileID: 8300000, guid: 351f9ee336e05410d8c5c4e337f47c05, type: 3}
-  - {fileID: 8300000, guid: 24127612ca2604791926d4cdeec341de, type: 3}
-  - {fileID: 8300000, guid: da792ffe5c14243ae99ea9ffb021b191, type: 3}
-  - {fileID: 8300000, guid: 47535230b193b420c9586d2ae3e5928d, type: 3}
-  - {fileID: 8300000, guid: ae2136344e61543b1aab993ec96250aa, type: 3}
-  - {fileID: 8300000, guid: 15ec29f4a41444a5a834d929670202f2, type: 3}
-  - {fileID: 8300000, guid: b087ac462b848445cbb3199af61d0c1e, type: 3}
-  - {fileID: 8300000, guid: 439cab004dac74d2aa89943f5aa594fe, type: 3}
-  - {fileID: 8300000, guid: 87b72f4ea9e4f47c995a54373a58c2d3, type: 3}
-  - {fileID: 8300000, guid: 3bfcd72de8dc74fb3a1d4cb924c2b8b6, type: 3}
-  margin: 10
-  speed: 0.05
---- !u!4 &690142876
+--- !u!4 &690142876 stripped
 Transform:
-  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 577047396439280820, guid: 9c62e18179e954f32a7752c86d0967a2,
     type: 3}
   m_PrefabInstance: {fileID: 1615686790}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 690142874}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 334014494}
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &694143204
 GameObject:
   m_ObjectHideFlags: 0
@@ -5128,9 +5057,9 @@ Light:
   m_Enabled: 1
   serializedVersion: 9
   m_Type: 2
-  m_Color: {r: 0.07450981, g: 0.09411765, b: 0.19215687, a: 1}
+  m_Color: {r: 0.05490196, g: 0.08627451, b: 0.25490198, a: 1}
   m_Intensity: 10000000
-  m_Range: 10
+  m_Range: 3
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -5174,7 +5103,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 10}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 3}
   m_UseBoundingSphereOverride: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -5757,7 +5686,7 @@ PrefabInstance:
     - target: {fileID: -3191952593081100634, guid: 9c62e18179e954f32a7752c86d0967a2,
         type: 3}
       propertyPath: margin
-      value: 10
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -3191952593081100634, guid: 9c62e18179e954f32a7752c86d0967a2,
         type: 3}
@@ -5884,6 +5813,12 @@ PrefabInstance:
       propertyPath: sounds.Array.data[24]
       value: 
       objectReference: {fileID: 8300000, guid: 3bfcd72de8dc74fb3a1d4cb924c2b8b6, type: 3}
+    - target: {fileID: -3191952593081100634, guid: 9c62e18179e954f32a7752c86d0967a2,
+        type: 3}
+      propertyPath: sampleDalle
+      value: 
+      objectReference: {fileID: 6762425218911741836, guid: a634e3f4c88a5400b967f7e63bebfc00,
+        type: 3}
     - target: {fileID: 577047396439280820, guid: 9c62e18179e954f32a7752c86d0967a2,
         type: 3}
       propertyPath: m_LocalPosition.x
