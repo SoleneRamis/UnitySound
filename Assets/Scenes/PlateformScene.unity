@@ -788,7 +788,7 @@ PrefabInstance:
         type: 3}
       propertyPath: sampleDalle
       value: 
-      objectReference: {fileID: 1052943483528985043, guid: a634e3f4c88a5400b967f7e63bebfc00,
+      objectReference: {fileID: -927199367670048503, guid: 4e3c3375d59114c6eb6626c52fb278d3,
         type: 3}
     - target: {fileID: 577047396439280820, guid: 9c62e18179e954f32a7752c86d0967a2,
         type: 3}
