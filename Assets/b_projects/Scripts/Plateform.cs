@@ -48,6 +48,7 @@ public class Plateform : Singleton<Plateform>
                 //Add an animation to a tile
                 animation = Instantiate<GameObject>(animations[index], transform);
                 animation.transform.position = dalle.transform.position;
+                animation.transform.SetParent(dalle.transform);
                 
                 _plateform[index] = dalle;
                 index++;
