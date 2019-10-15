@@ -13,7 +13,7 @@ public class Plateform : Singleton<Plateform>
     public float speed = 0.05f;
 
     private GameObject[] _plateform = new GameObject[25];
-    private string[] _letters = { "a", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" };
+    private string[] _letters = { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "x", "y", "z" };
 
     void Start()
     {
