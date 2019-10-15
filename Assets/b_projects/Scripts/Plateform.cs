@@ -18,7 +18,6 @@ public class Plateform : Singleton<Plateform>
     {
         GameObject dalle;
         
-     
         int index = 0;
         float dalleWidth = 1.8f;
         int line;
@@ -38,7 +37,7 @@ public class Plateform : Singleton<Plateform>
                 dalle.GetComponent<Dalle>().letter = _letters[index];
 
                 AudioSource source = dalle.AddComponent<AudioSource>();
-                source.clip = sounds[line];
+                source.clip = sounds[index];
 
                 _plateform[index] = dalle;
                 index++;
