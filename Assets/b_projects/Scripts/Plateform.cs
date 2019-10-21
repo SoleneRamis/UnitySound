@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Timers;
+using UnityEditor.Animations;
 using UnityEngine;
 
 public class Plateform : Singleton<Plateform>
 {
     public GameObject sampleDalle;
+    public RuntimeAnimatorController sampleAnimator;
     public AudioClip[] sounds;
     public GameObject[] animations;
 
@@ -19,6 +21,8 @@ public class Plateform : Singleton<Plateform>
     {
         GameObject dalle;
         GameObject animation;
+        Animator animator;
+        RuntimeAnimatorController animatorController;
         
         int index = 0;
         float dalleWidth = 1.8f;
@@ -49,7 +53,12 @@ public class Plateform : Singleton<Plateform>
                 animation = Instantiate<GameObject>(animations[index], transform);
                 animation.transform.position = dalle.transform.position;
                 animation.transform.SetParent(dalle.transform);
-                
+
+                //Add controller to animation
+                animator = animation.GetComponent<Animator>();
+                animatorController = Instantiate<RuntimeAnimatorController>(sampleAnimator);
+                animator.runtimeAnimatorController = animatorController;
+
                 _plateform[index] = dalle;
                 index++;
             }

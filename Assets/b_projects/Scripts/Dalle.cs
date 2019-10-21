@@ -20,6 +20,7 @@ public class Dalle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Animator animator;
         //automatic tranform
         transform.position = MathUtils.Lerp(initPosition, targetPosition, Mathf.Sin(Time.time+timeOffset));
 
@@ -29,6 +30,9 @@ public class Dalle : MonoBehaviour
         {
             transform.Translate(0, 0.5f, 0);
             GetComponent<AudioSource>().Play();
+            animator = this.gameObject.transform.GetChild(0).GetComponent<Animator>();
+
+            Debug.Log(animator.runtimeAnimatorController);
         }
     }
 }
