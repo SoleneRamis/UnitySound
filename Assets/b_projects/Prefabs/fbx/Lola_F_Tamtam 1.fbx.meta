@@ -1,0 +1,307 @@
+fileFormatVersion: 2
+guid: 269742dbafa79894282c42975f0b101f
+ModelImporter:
+  serializedVersion: 26
+  internalIDToNameTable:
+  - first:
+      74: 5874717217216350553
+    second: tamtam
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: tamtam
+      takeName: Cinema_4D_Main
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 55
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: Lola_F_Tamtam 1(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Particules
+      parentName: Lola_F_Tamtam 1(Clone)
+      position: {x: 0.16961, y: 0.9057567, z: -0.270979}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Neutre_0
+      parentName: Particules
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: "Sph\xE8re_3"
+      parentName: Neutre_0
+      position: {x: 0.06976763, y: 0.1475, z: -0.5266407}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.2739314, y: 0.2739314, z: 0.2739314}
+    - name: "Sph\xE8re_2"
+      parentName: Neutre_0
+      position: {x: 0.44793764, y: -0.4425, z: 0.7867317}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.50229746, y: 0.50229746, z: 0.50229746}
+    - name: "Sph\xE8re_1"
+      parentName: Neutre_0
+      position: {x: -1.5725378, y: 0.1475, z: 0.270979}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.11476285, y: 0.11476285, z: 0.11476285}
+    - name: "Sph\xE8re"
+      parentName: Neutre_0
+      position: {x: -0.39352742, y: -0.2184156, z: -0.18643542}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 3.2045445, y: 3.2045445, z: 3.2045445}
+    - name: Neutre_1
+      parentName: Particules
+      position: {x: -0.19999999, y: 0.87, z: 0.21}
+      rotation: {x: -0.71172845, y: 0.15211232, z: 0.031777166, w: 0.68505085}
+      scale: {x: 1, y: 1, z: 1}
+    - name: "Sph\xE8re_3_2"
+      parentName: Neutre_1
+      position: {x: 0.06976763, y: 0.1475, z: -0.5266407}
+      rotation: {x: 7.102666e-18, y: 2.8410663e-17, z: 4.2615994e-17, w: 1}
+      scale: {x: 0.2739314, y: 0.2739314, z: 0.2739314}
+    - name: "Sph\xE8re_2_2"
+      parentName: Neutre_1
+      position: {x: 0.44793764, y: -0.4425, z: 0.7867317}
+      rotation: {x: -3.9878543e-18, y: -6.978745e-18, z: -2.7830216e-35, w: 1}
+      scale: {x: 0.50229746, y: 0.50229746, z: 0.50229746}
+    - name: "Sph\xE8re_1_2"
+      parentName: Neutre_1
+      position: {x: -1.5725378, y: 0.1475, z: 0.270979}
+      rotation: {x: -1.3059913e-17, y: -4.0268065e-17, z: 3.4826435e-17, w: 1}
+      scale: {x: 0.11476285, y: 0.11476285, z: 0.11476285}
+    - name: "Sph\xE8re_2_3"
+      parentName: Neutre_1
+      position: {x: -0.39352742, y: -0.2184156, z: -0.18643542}
+      rotation: {x: -7.342774e-34, y: 1.5887349e-17, z: 4.6217744e-17, w: 1}
+      scale: {x: 3.2045445, y: 3.2045445, z: 3.2045445}
+    - name: Neutre_2
+      parentName: Particules
+      position: {x: -0.39999998, y: 1.74, z: 0.42}
+      rotation: {x: 0.029323192, y: 0.3742456, z: 0.42232308, w: 0.82505983}
+      scale: {x: 1, y: 1, z: 1}
+    - name: "Sph\xE8re_3_3"
+      parentName: Neutre_2
+      position: {x: 0.06976763, y: 0.1475, z: -0.5266407}
+      rotation: {x: -1.0089571e-33, y: 2.8410663e-17, z: 3.551333e-17, w: 1}
+      scale: {x: 0.2739314, y: 0.2739314, z: 0.2739314}
+    - name: "Sph\xE8re_2_4"
+      parentName: Neutre_2
+      position: {x: 0.44793764, y: -0.4425, z: 0.7867317}
+      rotation: {x: 4.785425e-17, y: 1.1450146e-33, z: 2.3927126e-17, w: 1}
+      scale: {x: 0.50229746, y: 0.50229746, z: 0.50229746}
+    - name: "Sph\xE8re_1_3"
+      parentName: Neutre_2
+      position: {x: -1.5725378, y: 0.1475, z: 0.270979}
+      rotation: {x: 3.4826435e-17, y: 1.5161007e-33, z: 4.3533043e-17, w: 1}
+      scale: {x: 0.11476285, y: 0.11476285, z: 0.11476285}
+    - name: "Sph\xE8re_3_4"
+      parentName: Neutre_2
+      position: {x: -0.39352742, y: -0.2184156, z: -0.18643542}
+      rotation: {x: -2.3108872e-17, y: -8.010299e-34, z: 3.4663308e-17, w: 1}
+      scale: {x: 3.2045445, y: 3.2045445, z: 3.2045445}
+    - name: Neutre_3
+      parentName: Particules
+      position: {x: -0.59999996, y: 2.61, z: 0.63}
+      rotation: {x: -0.6412111, y: 0.5945684, z: -0.45167026, w: -0.17700498}
+      scale: {x: 1, y: 1, z: 1}
+    - name: "Sph\xE8re_3_5"
+      parentName: Neutre_3
+      position: {x: 0.06976763, y: 0.1475, z: -0.5266407}
+      rotation: {x: 6.4573255e-33, y: -1.1364265e-16, z: 5.6821326e-17, w: 1}
+      scale: {x: 0.2739314, y: 0.2739314, z: 0.2739314}
+    - name: "Sph\xE8re_2_5"
+      parentName: Neutre_3
+      position: {x: 0.44793764, y: -0.4425, z: 0.7867317}
+      rotation: {x: -6.380567e-17, y: 6.380567e-17, z: 4.071163e-33, w: 1}
+      scale: {x: 0.50229746, y: 0.50229746, z: 0.50229746}
+    - name: "Sph\xE8re_1_4"
+      parentName: Neutre_3
+      position: {x: -1.5725378, y: 0.1475, z: 0.270979}
+      rotation: {x: -8.706609e-18, y: -6.965287e-17, z: 1.7413217e-17, w: 1}
+      scale: {x: 0.11476285, y: 0.11476285, z: 0.11476285}
+    - name: "Sph\xE8re_4"
+      parentName: Neutre_3
+      position: {x: -0.39352742, y: -0.2184156, z: -0.18643542}
+      rotation: {x: 1.1554436e-17, y: -2.6700998e-34, z: -2.3108872e-17, w: 1}
+      scale: {x: 3.2045445, y: 3.2045445, z: 3.2045445}
+    - name: Son
+      parentName: Lola_F_Tamtam 1(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Cloneur
+      parentName: Lola_F_Tamtam 1(Clone)
+      position: {x: -0, y: 0.34, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Haut_Gauche
+      parentName: Cloneur
+      position: {x: -0.45, y: 0, z: -0.45}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: N_1
+      parentName: Haut_Gauche
+      position: {x: -0, y: -0.1941541, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0, y: 0, z: 0}
+    - name: "Sph\xE8re_1_5"
+      parentName: Haut_Gauche
+      position: {x: -0, y: 0.5958459, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0, y: 0, z: 0}
+    - name: Haut_Droite
+      parentName: Cloneur
+      position: {x: -0.45, y: 0, z: 0.45}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: N_2
+      parentName: Haut_Droite
+      position: {x: -0, y: -0.1941541, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0, y: 0, z: 0}
+    - name: "Sph\xE8re_2_6"
+      parentName: Haut_Droite
+      position: {x: -0, y: 0.5958459, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0, y: 0, z: 0}
+    - name: Bas_Gauche
+      parentName: Cloneur
+      position: {x: 0.45, y: 0, z: -0.45}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: N_3
+      parentName: Bas_Gauche
+      position: {x: -0, y: -0.1941541, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0, y: 0, z: 0}
+    - name: "Sph\xE8re_3_6"
+      parentName: Bas_Gauche
+      position: {x: -0, y: 0.59999996, z: -7.105427e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0, y: 0, z: 0}
+    - name: Bas_Droite
+      parentName: Cloneur
+      position: {x: 0.45, y: -0.0027671254, z: 0.45}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: N_4
+      parentName: Bas_Droite
+      position: {x: -0, y: -0.1941541, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0, y: 0, z: 0}
+    - name: "Sph\xE8re_4_2"
+      parentName: Bas_Droite
+      position: {x: -0, y: 0.5958459, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0, y: 0, z: 0}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

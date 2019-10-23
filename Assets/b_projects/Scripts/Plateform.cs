@@ -15,14 +15,12 @@ public class Plateform : Singleton<Plateform>
     public float speed = 0.05f;
 
     private GameObject[] _plateform = new GameObject[25];
-    private string[] _letters = { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "x", "y", "z" };
+    private string[] _letters = { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "x", "y", "z"};
 
     void Start()
     {
         GameObject dalle;
-        GameObject animation;
-        Animator animator;
-        RuntimeAnimatorController animatorController;
+        GameObject animationObject;
         
         int index = 0;
         float dalleWidth = 1.8f;
@@ -48,16 +46,13 @@ public class Plateform : Singleton<Plateform>
                 //Add a sound to a tile
                 AudioSource source = dalle.AddComponent<AudioSource>();
                 source.clip = sounds[index];
+                source.playOnAwake = false;
 
                 //Add an animation to a tile
-                animation = Instantiate<GameObject>(animations[index], transform);
-                animation.transform.position = dalle.transform.position;
-                animation.transform.SetParent(dalle.transform);
-
-                //Add controller to animation
-                animator = animation.GetComponent<Animator>();
-                animatorController = Instantiate<RuntimeAnimatorController>(sampleAnimator);
-                animator.runtimeAnimatorController = animatorController;
+                animationObject = Instantiate<GameObject>(animations[index], transform);
+                animationObject.transform.position = dalle.transform.position;
+                animationObject.transform.SetParent(dalle.transform);
+                animationObject.GetComponent<Animation>().Stop();
 
                 _plateform[index] = dalle;
                 index++;
