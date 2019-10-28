@@ -7,7 +7,6 @@ using UnityEngine;
 public class Plateform : Singleton<Plateform>
 {
     public GameObject sampleDalle;
-    public RuntimeAnimatorController sampleAnimator;
     public AudioClip[] sounds;
     public GameObject[] animations;
 
@@ -32,7 +31,6 @@ public class Plateform : Singleton<Plateform>
         {
             for (column = 0; column < 5; column++)
             {
-
                 float x = ((line - offsetOriginPosition) * dalleWidth + (line - offsetOriginPosition) / margin);
                 float z = (column - offsetOriginPosition) * dalleWidth + (column - offsetOriginPosition) / margin;
 
@@ -63,7 +61,6 @@ public class Plateform : Singleton<Plateform>
     private void Update()
     {
 
-
     }
 
     private void FixedUpdate()
@@ -78,7 +75,6 @@ public class Plateform : Singleton<Plateform>
 
         rotation.eulerAngles = angles;
         transform.rotation = rotation;
-
     }
 
     public GameObject[] GetTiles()
