@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
 
 public class Dalle : MonoBehaviour
@@ -13,37 +11,53 @@ public class Dalle : MonoBehaviour
     private Animation _animation;
     private AudioSource _audio;
 
-    Light[] lights;
-    string lightName = "AreaLight";
-    string emissionColor = "_EmissionColor";
-    float offIntensity = 0.0f;
-    float onIntensity = 300.0f;
+    private Light[] _lights;
+    private string _lightName = "AreaLight";
+    private string _emissionColor = "_EmissionColor";
+    private float _offIntensity = 0.0f;
+    private float _onIntensity = 1000.0f;
+    private Coroutine _lightsOff;
 
-    private Material material;
-    private Coroutine lightsOff;
+    private Material _material;
+
+    private ParticleSystem[] _particles;
+    private string _particlestName = "ParticleSystem";
+    private Coroutine _particlesOff;
 
     void Start()
     {
         initPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-        targetPosition = new Vector3(initPosition.x, initPosition.y + (UnityEngine.Random.value*0.07f), initPosition.z);
-        timeOffset = UnityEngine.Random.value * 10f;
+        targetPosition = new Vector3(initPosition.x, initPosition.y + (Random.value*0.07f), initPosition.z);
+        timeOffset = Random.value * 10f;
 
         _audio = GetComponent<AudioSource>();
-        _animation = this.gameObject.GetComponentInChildren<Animation>();
+        _animation = GetComponentInChildren<Animation>();
 
-        lights = GetComponentsInChildren<Light> ();
-        Debug.Log(lights.Length);
-        foreach (Light light in lights)
+        // LIGHT
+        _lights = GetComponentsInChildren<Light> ();
+        foreach (Light light in _lights)
         {
-            if(light.name == lightName)
+            if(light.name == _lightName)
             {
                 light.enabled = false;
-                light.intensity = offIntensity;
+                light.intensity = _offIntensity;
             }
         }
 
+        // MATERIAL
         Renderer renderer = GetComponent<Renderer>();
-        material = renderer.material = Instantiate<Material>(renderer.material);
+        _material = renderer.material = Instantiate<Material>(renderer.material);
+
+        //PARTICLES
+        _particles = GetComponentsInChildren<ParticleSystem>();
+
+        foreach (ParticleSystem particle in _particles)
+        {
+            if (particle.name == _particlestName)
+            {
+                particle.Stop();
+            }
+        }
     }
 
     // Update is called once per frame
@@ -57,33 +71,69 @@ public class Dalle : MonoBehaviour
         {
             _audio.Play();
             _animation.Play();
-            foreach (Light light in lights)
+
+            // LIGHT
+            foreach (Light light in _lights)
             {
-                if (light.name == lightName)
+                if (light.name == _lightName)
                 {
                     light.enabled = true;
                     light.color = Color.blue;
-                    light.intensity = onIntensity;
-                    material.SetColor(emissionColor, Color.red);
+                    light.intensity = _onIntensity;
                 }
             }
 
-            if (lightsOff != null)
-                StopCoroutine(lightsOff);
-            lightsOff = StartCoroutine(SwitchOffLights());
+            if (_lightsOff != null)
+                StopCoroutine(_lightsOff);
+            _lightsOff = StartCoroutine(SwitchOffLights());
+
+            // PARTICLES
+            foreach (ParticleSystem particle in _particles)
+            {
+                if (particle.name == _particlestName)
+                {
+                    ParticleSystem.MinMaxCurve curve = new ParticleSystem.MinMaxCurve(0, _animation.clip.length * 0.5f * Random.value);
+                    var main = particle.main;
+
+                    main.startLifetime = curve;//_animation.clip.length * 0.5f * Random.value;
+                    main.duration = _animation.clip.length;
+
+                    var burst = particle.emission.GetBurst(0);
+                    burst.repeatInterval = _animation.clip.length * 2;
+                    particle.emission.SetBurst(0, burst);
+
+                    particle.Play();
+                }
+            }
+
+            if (_particlesOff != null)
+                StopCoroutine(_particlesOff);
+            _particlesOff = StartCoroutine(SwitchOffParticles());
         }
     }
 
     private IEnumerator SwitchOffLights()
     {
         yield return new WaitForSeconds(_animation.clip.length);
-        foreach (Light light in lights)
+        foreach (Light light in _lights)
         {
-            if (light.name == lightName)
+            if (light.name == _lightName)
             {
                 light.enabled = false;
-                light.color = Color.black;
-                light.intensity = offIntensity;
+                light.color = Color.blue;
+                light.intensity = _offIntensity;
+            }
+        }
+    }
+
+    private IEnumerator SwitchOffParticles()
+    {
+        yield return new WaitForSeconds(_animation.clip.length);
+        foreach (ParticleSystem particle in _particles)
+        {
+            if (particle.name == _particlestName)
+            {
+                particle.Stop();
             }
         }
     }
