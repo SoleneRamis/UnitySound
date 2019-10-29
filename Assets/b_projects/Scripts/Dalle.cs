@@ -14,7 +14,7 @@ public class Dalle : MonoBehaviour
     private Light[] _lights;
     private string _lightName = "AreaLight";
     private float _offIntensity = 0.0f;
-    private float _onIntensity = 100.0f;
+    private float _onIntensity = 1000.0f;
     private Coroutine _lightsOff;
 
     private Material _material;
