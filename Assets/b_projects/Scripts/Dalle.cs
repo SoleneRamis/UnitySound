@@ -13,9 +13,8 @@ public class Dalle : MonoBehaviour
 
     private Light[] _lights;
     private string _lightName = "AreaLight";
-    private string _emissionColor = "_EmissionColor";
     private float _offIntensity = 0.0f;
-    private float _onIntensity = 1000.0f;
+    private float _onIntensity = 50.0f;
     private Coroutine _lightsOff;
 
     private Material _material;
@@ -77,8 +76,9 @@ public class Dalle : MonoBehaviour
             {
                 if (light.name == _lightName)
                 {
+                    Color color = new Color32(193, 171, 206, 255);
                     light.enabled = true;
-                    light.color = Color.blue;
+                    light.color = color;
                     light.intensity = _onIntensity;
                 }
             }
@@ -120,7 +120,7 @@ public class Dalle : MonoBehaviour
             if (light.name == _lightName)
             {
                 light.enabled = false;
-                light.color = Color.blue;
+                light.color = Color.black;
                 light.intensity = _offIntensity;
             }
         }

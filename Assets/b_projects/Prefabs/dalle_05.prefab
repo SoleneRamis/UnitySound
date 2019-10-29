@@ -4932,7 +4932,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6559440750112167610}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.8, z: 0}
+  m_LocalPosition: {x: 0, y: 2, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8877025964549720645}
@@ -4948,10 +4948,10 @@ Light:
   m_Enabled: 1
   serializedVersion: 9
   m_Type: 2
-  m_Color: {r: 1, g: 1, b: 1, a: 0.6392157}
+  m_Color: {r: 0.4522934, g: 0, b: 1, a: 1}
   m_Intensity: 7.957747
-  m_Range: 1
-  m_SpotAngle: 30
+  m_Range: 2.5
+  m_SpotAngle: 57.9
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
@@ -4973,8 +4973,8 @@ Light:
       e13: 0
       e20: 0
       e21: 0
-      e22: 1
-      e23: 0
+      e22: 2.2222223
+      e23: -1.2222223
       e30: 0
       e31: 0
       e32: 0
@@ -4994,7 +4994,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 1}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 2.5}
   m_UseBoundingSphereOverride: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -5017,7 +5017,7 @@ MonoBehaviour:
   areaIntensity: 200
   enableSpotReflector: 0
   luxAtDistance: 1
-  m_InnerSpotPercent: 0
+  m_InnerSpotPercent: 56.8
   lightDimmer: 1
   m_VolumetricDimmer: 1
   lightUnit: 0
@@ -5026,11 +5026,11 @@ MonoBehaviour:
   affectSpecular: 1
   nonLightmappedOnly: 0
   lightTypeExtent: 1
-  m_SpotLightShape: 0
+  m_SpotLightShape: 2
   shapeWidth: 2
   shapeHeight: 2
   aspectRatio: 1
-  shapeRadius: 20
+  shapeRadius: 50
   maxSmoothness: 0.99
   applyRangeAttenuation: 1
   useOldInspector: 0
