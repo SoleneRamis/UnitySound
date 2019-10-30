@@ -13,6 +13,8 @@ public class Plateform : Singleton<Plateform>
     public float margin = 10f;
     public float speed = 0.05f;
 
+    public Gradient[] particleColors;
+
     private GameObject[] _plateform = new GameObject[25];
     private string[] _letters = { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "x", "y", "z"};
 
@@ -41,6 +43,12 @@ public class Plateform : Singleton<Plateform>
                 //Set a letter to a tile
                 dalle.GetComponent<Dalle>().letter = _letters[index];
 
+                // Set a letter to a tile
+                dalle.GetComponent<Dalle>().letter = _letters[index];
+
+                //set color to a tile
+                dalle.GetComponent<Dalle>().particleColor = particleColors[index];
+
                 //Add a sound to a tile
                 AudioSource source = dalle.AddComponent<AudioSource>();
                 source.clip = sounds[index];
@@ -61,6 +69,21 @@ public class Plateform : Singleton<Plateform>
     private void Update()
     {
 
+        if (Input.GetKeyDown("w"))
+        {
+            StartCoroutine(animTile());
+        }
+    }
+
+    private IEnumerator animTile()
+    {
+        WaitForSeconds wait = new WaitForSeconds(0.05f);
+
+        foreach (GameObject p in _plateform)
+        {
+            p.GetComponentInChildren<Animation>().Play();
+            yield return wait;
+        }
     }
 
     private void FixedUpdate()

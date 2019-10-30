@@ -205,7 +205,6 @@ GameObject:
   - component: {fileID: 8877025964549720645}
   - component: {fileID: 462338772959817843}
   - component: {fileID: 6149110868155239562}
-  - component: {fileID: 212099028733525274}
   m_Layer: 0
   m_Name: dalle_05
   m_TagString: Untagged
@@ -276,19 +275,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &212099028733525274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5578501770632575062}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88ffbb2243aca4b418bb6afb9ecf038b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  letter: 
 --- !u!1 &5874545125392036404
 GameObject:
   m_ObjectHideFlags: 0

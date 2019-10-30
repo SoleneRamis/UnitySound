@@ -23,6 +23,8 @@ public class Dalle : MonoBehaviour
     private string _particlestName = "ParticleSystem";
     private Coroutine _particlesOff;
 
+    public Gradient particleColor;
+
     void Start()
     {
         initPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
@@ -30,7 +32,7 @@ public class Dalle : MonoBehaviour
         timeOffset = Random.value * 10f;
 
         _audio = GetComponent<AudioSource>();
-        _animation = GetComponentInChildren<Animation>();
+        _animation = GetComponentsInChildren<Animation>()[1];
 
         // LIGHT
         _lights = GetComponentsInChildren<Light> ();
@@ -44,7 +46,7 @@ public class Dalle : MonoBehaviour
         }
 
         // MATERIAL
-        Renderer renderer = GetComponent<Renderer>();
+        Renderer renderer = GetComponentInChildren<Renderer>();
         _material = renderer.material = Instantiate<Material>(renderer.material);
 
         //PARTICLES
@@ -101,6 +103,10 @@ public class Dalle : MonoBehaviour
                     var burst = particle.emission.GetBurst(0);
                     burst.repeatInterval = _animation.clip.length * 2;
                     particle.emission.SetBurst(0, burst);
+
+                    var colors = particle.colorOverLifetime;
+                    colors.enabled = true;
+                    colors.color = particleColor;
 
                     particle.Play();
                 }
