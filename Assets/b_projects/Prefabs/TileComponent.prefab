@@ -5126,7 +5126,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 9
   m_Type: 2
-  m_Color: {r: 0.35826805, g: 0.41395062, b: 0.9150943, a: 1}
+  m_Color: {r: 0.17254902, g: 0.91764706, b: 0.9254902, a: 1}
   m_Intensity: 39.788734
   m_Range: 2.5
   m_SpotAngle: 57.9
@@ -5336,7 +5336,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 9
   m_Type: 2
-  m_Color: {r: 0.36078432, g: 0.41568628, b: 0.91764706, a: 1}
+  m_Color: {r: 0.17254902, g: 0.91764706, b: 0.9254902, a: 1}
   m_Intensity: 79.57747
   m_Range: 2.5
   m_SpotAngle: 57.9
@@ -5553,6 +5553,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149110868155239562, guid: 3cf55410160534484843962f748a87ae,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c9628690106ea4a3f8510c7c87c553e8, type: 2}
+    - target: {fileID: 6149110868155239562, guid: 3cf55410160534484843962f748a87ae,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6559440750112167610, guid: 3cf55410160534484843962f748a87ae,
         type: 3}
