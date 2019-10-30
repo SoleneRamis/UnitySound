@@ -9,7 +9,7 @@ public class PressEnter : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.KeypadEnter))
+        if (Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return))
         {
             _canvas.enabled = false;
         }
