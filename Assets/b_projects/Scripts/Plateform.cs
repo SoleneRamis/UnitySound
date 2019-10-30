@@ -16,7 +16,7 @@ public class Plateform : Singleton<Plateform>
     public Gradient[] particleColors;
 
     private GameObject[] _plateform = new GameObject[16];
-    private string[] _letters = { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "x", "y", "z"};
+    private string[] _letters = { "y", "c", "b", "h", "v", "d", "o", "k", "i", "j", "n", "f", "g", "t", "u", "x"};
 
     void Start()
     {
