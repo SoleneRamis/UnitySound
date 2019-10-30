@@ -5821,7 +5821,7 @@ PrefabInstance:
         type: 3}
       propertyPath: sampleDalle
       value: 
-      objectReference: {fileID: 5578501770632575062, guid: 3cf55410160534484843962f748a87ae,
+      objectReference: {fileID: 3314500075480556479, guid: 35ac2df7aa018406f96aa5a1f44fa8d6,
         type: 3}
     - target: {fileID: -3191952593081100634, guid: 9c62e18179e954f32a7752c86d0967a2,
         type: 3}
@@ -5869,7 +5869,7 @@ PrefabInstance:
         type: 3}
       propertyPath: animations.Array.data[10]
       value: 
-      objectReference: {fileID: -927199367670048503, guid: acad80a67cc4e4e47bff51734a644fbe,
+      objectReference: {fileID: -927199367670048503, guid: 174180cbf7ad742e2a9f0371a1393469,
         type: 3}
     - target: {fileID: -3191952593081100634, guid: 9c62e18179e954f32a7752c86d0967a2,
         type: 3}
@@ -5965,7 +5965,7 @@ PrefabInstance:
         type: 3}
       propertyPath: animations.Array.data[11]
       value: 
-      objectReference: {fileID: -927199367670048503, guid: 15bdaf6823db442829e3c828892f4e89,
+      objectReference: {fileID: -927199367670048503, guid: 1dbde5035d22841e4a76e9c9e9736842,
         type: 3}
     - target: {fileID: -3191952593081100634, guid: 9c62e18179e954f32a7752c86d0967a2,
         type: 3}

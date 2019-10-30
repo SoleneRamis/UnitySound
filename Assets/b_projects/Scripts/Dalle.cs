@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using static UnityEngine.ParticleSystem;
 
 public class Dalle : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class Dalle : MonoBehaviour
     private float timeOffset;
 
     public string letter;
+
     private Animation _animation;
     private AudioSource _audio;
 
@@ -106,7 +108,15 @@ public class Dalle : MonoBehaviour
 
                     var colors = particle.colorOverLifetime;
                     colors.enabled = true;
-                    colors.color = particleColor;
+                    MinMaxGradient gradient = particleColor;
+                    Color c = gradient.colorMin;
+                    c.a = 1.0f;
+                    gradient.colorMin = c;
+                    c = gradient.colorMax;
+                    c.a = 1.0f;
+                    gradient.colorMax = c;
+                    colors.color = gradient;
+                    Debug.Log(((MinMaxGradient)particle.colorOverLifetime.color).colorMin.a + " // " + ((MinMaxGradient)particle.colorOverLifetime.color).colorMax);
 
                     particle.Play();
                 }

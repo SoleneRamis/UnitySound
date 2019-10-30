@@ -81,7 +81,7 @@ public class Plateform : Singleton<Plateform>
 
         foreach (GameObject p in _plateform)
         {
-            p.GetComponentInChildren<Animation>().Play();
+            p.GetComponentsInChildren<Animation>()[0].Play();
             yield return wait;
         }
     }
