@@ -15,7 +15,7 @@ public class Plateform : Singleton<Plateform>
 
     public Gradient[] particleColors;
 
-    private GameObject[] _plateform = new GameObject[25];
+    private GameObject[] _plateform = new GameObject[16];
     private string[] _letters = { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "x", "y", "z"};
 
     void Start()
@@ -29,9 +29,9 @@ public class Plateform : Singleton<Plateform>
         int column;
         float offsetOriginPosition = 2.5f;
 
-        for (line = 0; line < 5; line++)
+        for (line = 0; line < 4; line++)
         {
-            for (column = 0; column < 5; column++)
+            for (column = 0; column < 4; column++)
             {
                 float x = ((line - offsetOriginPosition) * dalleWidth + (line - offsetOriginPosition) / margin);
                 float z = (column - offsetOriginPosition) * dalleWidth + (column - offsetOriginPosition) / margin;
