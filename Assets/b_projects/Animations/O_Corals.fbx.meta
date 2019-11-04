@@ -6,7 +6,12 @@ ModelImporter:
   - first:
       74: 5874717217216350553
     second: Cinema_4D_Main
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: 31ba0c58c784a4949a8705a3348be0a5, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
