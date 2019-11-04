@@ -41,10 +41,35 @@ public class Plateform : Singleton<Plateform>
                 dalle.transform.position = new Vector3(x, 0, z);
 
                 //Set a letter to a tile
-                dalle.GetComponent<Dalle>().letter = _letters[index];
+                dalle.GetComponent<Dalle>().letter[0] = _letters[index];
 
-                // Set a letter to a tile
-                dalle.GetComponent<Dalle>().letter = _letters[index];
+                switch (_letters[index])
+                {
+                    case "u":
+                        dalle.GetComponent<Dalle>().letter[1] = "a";
+                        break;
+                    case "t":
+                        dalle.GetComponent<Dalle>().letter[1] = "q";
+                        break;
+                    case "g":
+                        dalle.GetComponent<Dalle>().letter[1] = "e";
+                        break;
+                    case "j":
+                        dalle.GetComponent<Dalle>().letter[1] = "z";
+                        break;
+                    case "o":
+                        dalle.GetComponent<Dalle>().letter[1] = "l";
+                        break;
+                    case "h":
+                        dalle.GetComponent<Dalle>().letter[1] = "s";
+                        break;
+                    case "b":
+                        dalle.GetComponent<Dalle>().letter[1] = "p";
+                        break;
+                    case "c":
+                        dalle.GetComponent<Dalle>().letter[1] = "r";
+                        break;
+                }
 
                 //set color to a tile
                 dalle.GetComponent<Dalle>().particleColor = particleColors[index];

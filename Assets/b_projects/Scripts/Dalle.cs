@@ -8,7 +8,7 @@ public class Dalle : MonoBehaviour
     private Vector3 targetPosition;
     private float timeOffset;
 
-    public string letter;
+    public string[] letter;
 
     private Animation _animation;
     private AudioSource _audio;
@@ -68,64 +68,66 @@ public class Dalle : MonoBehaviour
     {
         //automatic tranform
         transform.position = MathUtils.Lerp(initPosition, targetPosition, Mathf.Sin(Time.time+timeOffset));
-        
-        //dalle animation + sound played handled here when keypress
-        if (Input.GetKeyDown(letter))
+
+        for (int i = 0; i < letter.Length; i++)
         {
-            _audio.Play();
-            _animation.Play();
-
-            // LIGHT
-            foreach (Light light in _lights)
+            if (Input.GetKeyDown(letter[i]))
             {
-                if (light.name == _lightName)
+                _audio.Play();
+                _animation.Play();
+
+                // LIGHT
+                foreach (Light light in _lights)
                 {
-                    Color color = new Color32(193, 171, 206, 255);
-                    light.enabled = true;
-                    light.color = color;
-                    light.intensity = _onIntensity;
+                    if (light.name == _lightName)
+                    {
+                        Color color = new Color32(163, 245, 245, 255);
+                        light.enabled = true;
+                        light.color = color;
+                        light.intensity = _onIntensity;
+                    }
                 }
-            }
 
-            if (_lightsOff != null)
-                StopCoroutine(_lightsOff);
-            _lightsOff = StartCoroutine(SwitchOffLights());
+                if (_lightsOff != null)
+                    StopCoroutine(_lightsOff);
+                _lightsOff = StartCoroutine(SwitchOffLights());
 
-            // PARTICLES
-            foreach (ParticleSystem particle in _particles)
-            {
-                if (particle.name == _particlestName)
+                // PARTICLES
+                foreach (ParticleSystem particle in _particles)
                 {
-                    ParticleSystem.MinMaxCurve curve = new ParticleSystem.MinMaxCurve(0, _animation.clip.length * 0.5f * Random.value);
-                    var main = particle.main;
+                    if (particle.name == _particlestName)
+                    {
+                        ParticleSystem.MinMaxCurve curve = new ParticleSystem.MinMaxCurve(0, _animation.clip.length * 0.5f * Random.value);
+                        var main = particle.main;
 
-                    main.startLifetime = curve;//_animation.clip.length * 0.5f * Random.value;
-                    main.duration = _animation.clip.length;
+                        main.startLifetime = curve;//_animation.clip.length * 0.5f * Random.value;
+                        main.duration = _animation.clip.length;
 
-                    var burst = particle.emission.GetBurst(0);
-                    burst.repeatInterval = _animation.clip.length * 2;
-                    particle.emission.SetBurst(0, burst);
+                        var burst = particle.emission.GetBurst(0);
+                        burst.repeatInterval = _animation.clip.length * 2;
+                        particle.emission.SetBurst(0, burst);
 
-                    var colors = particle.colorOverLifetime;
-                    colors.enabled = true;
-                    MinMaxGradient gradient = particleColor;
-                    Color c = gradient.colorMin;
-                    c.a = 1.0f;
-                    gradient.colorMin = c;
-                    c = gradient.colorMax;
-                    c.a = 1.0f;
-                    gradient.colorMax = c;
-                    colors.color = gradient;
-                    Debug.Log(((MinMaxGradient)particle.colorOverLifetime.color).colorMin.a + " // " + ((MinMaxGradient)particle.colorOverLifetime.color).colorMax);
+                        var colors = particle.colorOverLifetime;
+                        colors.enabled = true;
+                        MinMaxGradient gradient = particleColor;
+                        Color c = gradient.colorMin;
+                        c.a = 1.0f;
+                        gradient.colorMin = c;
+                        c = gradient.colorMax;
+                        c.a = 1.0f;
+                        gradient.colorMax = c;
+                        colors.color = gradient;
+                        Debug.Log(((MinMaxGradient)particle.colorOverLifetime.color).colorMin.a + " // " + ((MinMaxGradient)particle.colorOverLifetime.color).colorMax);
 
-                    particle.Play();
+                        particle.Play();
+                    }
                 }
-            }
 
-            if (_particlesOff != null)
-                StopCoroutine(_particlesOff);
-            _particlesOff = StartCoroutine(SwitchOffParticles());
-        }
+                if (_particlesOff != null)
+                    StopCoroutine(_particlesOff);
+                _particlesOff = StartCoroutine(SwitchOffParticles());
+            }
+        }        
     }
 
     private IEnumerator SwitchOffLights()
